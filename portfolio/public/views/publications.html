@@ -1,0 +1,14 @@
+<link rel="stylesheet" type= "text/css" href="./style/big.css">
+<div id="section" ng-style="styleBoxHeight">
+  <h2 ng-style="styleTitle">PUBLICATIONS&emsp;<i class="fa fa-angle-down" ng-click="showContent()"></i></h2>
+    <div id="inner" ng-style="styleContent">
+      <ul>
+        <li ng-repeat="content in contents">
+        <h3>{{content.name}}</h3>
+        <h4>{{content.publisher}}</h4>
+        <span class="makebold"><a>Year:</a>&nbsp;{{content.year}}</span></br>
+        <span class="makebold"><a>Link:</a>&nbsp;{{content.link}}</span>
+        </li>
+      </ul>
+    </div>
+</div>

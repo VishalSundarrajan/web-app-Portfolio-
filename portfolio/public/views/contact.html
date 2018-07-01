@@ -1,0 +1,51 @@
+<link rel="stylesheet" type= "text/css" href="style/main.css">
+
+<div id="form-container" ng-controller="formController">
+  <form id="contact_form">
+    <h2>Want to get in touch?</h2>
+    <div>
+      <label for="name">
+        <span class="required">Name:</span>
+        <input type="text" id="name" name="name" value="" placeholder="Your Name (optional)" tabindex="1" ng-model="nameVar" autofocus="autofocus" />
+      </label>
+    </div>
+
+    <div>
+      <label for="companyName">
+        <span class="required">Name of your company:*</span>
+        <input type="text" id="companyName" name="companyName" placeholder="Enter Your Company Name" required="required" tabindex="2" ng-model="companyVar" />
+      </label>
+    </div>
+
+    <div>
+      <label for="email">
+        <span class="required">Email:*</span>
+        <input ng-keyup="emailValidate()" ng-class="emailValidity" type="text" id="email" name="email" value="" ng-model="emailVar" placeholder="Your Email" required="required" tabindex="2" />
+      </label>
+    </div>
+
+    <div>
+    <label for="position">
+    <span class="required">You are a..?</span>
+      <select id="position" name="position" tabindex="4" ng-model="positionVar">
+         <option value="Recruiter">Recruiter/Hiring Manager of this company</option>
+         <option value="employee">Technical person in this company (Technical)</option>
+         <option value="others"> Others </option>
+      </select>
+    </label>
+    </div>
+
+    <div>
+      <label for="message">
+        <span class="required">Message: </span>
+        <textarea id="message" name="message" placeholder="Please write your message here." tabindex="5" ng-model="messageVar"></textarea>
+      </label>
+    </div>
+
+    <div>
+        <button name="submit" type="submit" id="submit" ng-click="submitForm()" >SEND</button>
+    </div>
+    <div class="alert" ng-show="showsuccess"> Your message has been sent, Thank you!</div>
+
+  </form>
+</div><!-- /.container -->

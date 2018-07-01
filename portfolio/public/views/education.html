@@ -1,0 +1,15 @@
+<link rel="stylesheet" type= "text/css" href="./style/big.css">
+<div id="section" ng-style="styleBoxHeight">
+  <h2 ng-style="styleTitle">EDUCATION&emsp;<i class="fa fa-angle-down" ng-click="showContent()"></i></h2>
+    <div id="inner" ng-style="styleContent">
+      <ul>
+        <li ng-repeat="content in contents">
+        <h3>{{content.degree}}, {{content.university}}</h3>
+        <h4>{{content.major}} ({{content.year}})</h4>
+        <span class="makebold"><a>GPA:</a>&nbsp;{{content.gpa}}</span></br>
+        <span class="makebold"><a>Courses:</a>&nbsp;{{content.courses}}</span>
+        <h4>Thesis: </h4> <p>{{content.thesis}}</p>
+        </li>
+      </ul>
+    </div>
+</div>

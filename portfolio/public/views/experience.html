@@ -1,0 +1,18 @@
+<link rel="stylesheet" type= "text/css" href="./style/big.css">
+<div id="section" ng-style="styleBoxHeight">
+  <h2 ng-style="styleTitle">EXPERIENCE&emsp;<i class="fa fa-angle-down" ng-click="showContent()"></i></h2>
+    <div id="inner" ng-style="styleContent">
+      <ul>
+        <li ng-repeat="content in contents">
+        <h3>{{content.company}}, {{content.place}}<a class="more-link" ng-click="showPara(content)">{{content.readlink}}</a></h3>
+        <h4>{{content.position}}<br/>{{content.year}}</h4>
+        <p>{{content.technical}}</p>
+          <ul class="description">
+            <li class="check-element animate-show-hide" ng-show="content.show" ng-repeat="value in content.description">
+              <p>{{value}}</p><br/>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+</div>

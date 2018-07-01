@@ -1,0 +1,67 @@
+<link rel="stylesheet" type= "text/css" href="./style/big.css">
+<div id="section" ng-style="styleBoxHeight">
+
+  <h2 ng-style="styleTitle">PROJECTS&emsp;<i class="fa fa-angle-down" ng-click="showContent()"></i></h2>
+
+  &nbsp;<h4>List only <input type="text" list="languages" placeholder="e.g. Javascript" ng-model="language"> projects</h4>
+  <button name="submit" type="submit" id="submit" ng-click="onsubmit(language)"> submit</button>
+
+  <datalist id="languages">
+    <option value="C language">
+    <option value="CPP">
+    <option value="JavaScript">
+    <option value="Java">
+    <option value="Java 8">
+    <option value="Tomcat">
+    <option value="Servlet">
+    <option value="Hibernate">
+    <option value="Docker">
+    <option value="Spring">
+    <option value="Spring Boot">
+    <option value="AJAX">
+    <option value="Angular">
+    <option value="React">
+    <option value="Node">
+    <option value="HTTP">
+    <option value="Boost CPP">
+    <option value="Node">
+    <option value="HTML">
+    <option value="CSS">
+    <option value="Atom">
+    <option value="Firebase">
+    <option value="MS visual studio">
+    <option value="Python">
+    <option value="Eclipse">
+    <option value="Multi-threading">
+    <option value="Multi-processing">
+    <option value="C language">
+    <option value=".NET">
+    <option value="SQL">
+    <option value="Data Structure">
+    <option value="Linux">
+    <option value="Bash scripting">
+    <option value="REST API">
+    <option value="P4">
+    <option value="Ruby">
+    <option value="C#">
+  </datalist>
+
+
+
+    <div id="inner" ng-style="styleContent">
+      <ul>
+        <li ng-repeat="content in contents">
+        <div ng-show="content.showtitle">
+          <h3>{{content.name}}<a class="more-link" ng-click="showPara(content)">{{content.readlink}}</a></h3>
+          <h4>{{content.period}}</h4>
+          <span class="makebold"><a>Technical Skills:</a>&nbsp;{{content.technical}}</span>
+            <ul class="description">
+              <li class="check-element animate-show-hide" ng-show="content.show" ng-repeat="value in content.description">
+                <p>{{value}}</p><br/>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+</div>
